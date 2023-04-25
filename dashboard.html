@@ -1,0 +1,957 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            topBar: '#bcbcbc',
+            greyIcon: '#d8c8c8c',
+            fontColor: '#424242',
+            redIcon: '#d50000',
+          }
+        }
+      }
+    }
+  </script>
+  <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css"
+  rel="stylesheet"
+/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-FX+MdrRZCOORbdS4dV8+En+bk0p/o7q3yy4p+24FmvviXHm08V7/EJsoEGwLb7bsfcQz5Eqh7DmJlNSc8nYvQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<title>Last Mile</title>
+<link rel="icon" href="images/ml_logo.png">
+</head>
+<body class="pt-1">
+  <div class="flex justify-between items-center space-x-6 px-2">
+    <div class="flex items-center justify-center">
+      <img src="images/ml_logo.png" class="w-32" alt="logo" />
+      <div class="border-r h-8 border-gray-500 mx-8"></div>
+      <div class="flex-shrink-0 text-gray-500">
+        <div class="flex text-[0.7rem] gap-2 items-center">
+          <span>MERCHANT</span>
+          <i class="fa-solid fa-angle-right"></i>
+          <span class="text-gray-700">097-H32</span>
+        </div>
+        <div class="text-xl">Brac Seeds Uganda</div>
+      </div>
+    </div>
+    <div class="md-form p-1  input-group border h-fit w-1/2 rounded-md bg-gray-100">
+      <div class="input-group-prepend">
+        <span class="input-group-text border-none">
+          <i class="fas fa-search"></i>
+        </span>
+      </div>
+      <input class="form-control border-none focus:border-none bg-gray-100" type="text" placeholder="Try searching `members, agents, district, groups...`" aria-label="Search">
+    </div>
+    <div class="flex items-center space-x-2">
+        <img alt="account_logo" src="/images/brac_seed.png" class="w-24" />
+      <div>
+        <i class="fa-solid fa-ellipsis-vertical fa-xl px-2"></i>
+      </div>
+    </div>
+  </div>
+  <div class="mt-2">
+    <div class="flex justify-between px-6 py-3 bg-topBar">
+      <div class="flex text-gray-600 font-light gap-6 items-center">
+        <div class="font-semibold">Dashboard</div>
+        <div>Agents</div>
+        <div>Groups</div>
+        <div>Members</div>
+        <div>Records</div>
+        <div>Locations</div>
+        <div>Products</div>
+        <div>Services</div>
+        <div>Training</div>
+        <div>Messaging</div>
+      </div>
+      <div class="flex justify-center items-center gap-2">
+        <img alt="profile" src="images/profile.jpeg" class="w-8 h-8 rounded-full" />
+        <div>User Name</div>
+        <i class="fa-solid fa-caret-down "></i>
+      </div>
+    </div>
+  </div>
+  <nav class="">
+    <div class="px-6">
+      <div class="text-gray-600 font-light flex w-full">
+        <div class="flex flex-shrink-0 items-center  text-sm text-gray-400 mr-4 py-3">
+          <div class="flex gap-2 items-center pr-4 border-r border-gray-300">
+            <div class="hover:cursor-pointer"><i class="fa-regular fa-plus px-2 text-lg border rounded-md pb-1 text-[#03a9f4]"></i></div>
+            <div>Add New user</div>
+          </div>
+        </div>
+        <div class="flex justify-center items-center text-sm text-gray-400">
+          <div class="flex border-b border-[#03a9f4] h-full text-center items-center px-4 hover:cursor-pointer text-gray-900">Summary</div>
+          <div class="flex hover:border-b hover:border-[#03a9f4] h-full text-center items-center px-4 hover:cursor-pointer hover:text-gray-900">Projects</div>
+          <div class="flex hover:border-b hover:border-[#03a9f4] h-full text-center items-center px-4 hover:cursor-pointer hover:text-gray-900">Activities</div>
+          <div class="flex hover:border-b hover:border-[#03a9f4] h-full text-center items-center px-4 hover:cursor-pointer hover:text-gray-900">Timeline</div>
+          <div class="flex hover:border-b hover:border-[#03a9f4] h-full text-center items-center px-4 hover:cursor-pointer hover:text-gray-900">People</div>
+        </div>
+        <div class="flex items-center  text-sm text-gray-600 py-3 w-full">
+          <div class="flex gap-2 flex-shrink-0 items-center pl-6 border-l border-gray-300 py-2">
+            <div class=""><i class="fa-solid fa-wallet text-gray-300"></i></div>
+            <div>Wallet Ballance UGX:</div>
+            <span class="text-[#03a9f4]">5,432,754</span>
+          </div>
+        </div>
+        <div class="flex justify-end items-center w-full text-gray-600">
+          <div class="flex flex-shrink-0 items-center  text-sm text-gray-500 mr-4 py-3">
+            <div class="flex gap-2 items-center pr-4 border-r border-gray-300 py-2">
+              <div class=""><i class="fa-solid fa-comment-dots text-gray-300"></i></div>
+              <div>SMS Units:</div>
+              <div>
+                <span class="text-[#03a9f4]">750</span>
+                <span>of</span>
+                <span>3,500</span>
+              </div>
+            </div>
+          </div>
+          <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+              aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
+                  class="fas fa-bars fa-1x"></i></span></button>
+        </div>
+      </div>
+  </nav>
+  <main class="bg-gray-200 p-4">
+    <div class="grid grid-cols-4 gap-8">
+      <div class="bg-white rounded-md py-3 px-8 grid gap-2">
+        <div class="grid grid-cols-3 items-center text-sm">
+          <div class="col-span-2">New Members added</div>
+          <div class="relative col-span-1 justify-end">
+            <select
+              id="location"
+              name="location"
+              class="form-control appearance-none text-xs  py-2 text-base border-1 border-gray-250 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+            >
+              <option>Day</option>
+              <option>Week</option>
+              <option>Month</option>
+              <option>Number</option>
+              <option>Amount</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <svg class="fill-current h-4 w-4" viewBox="0 0 20 20">
+                <path d="M10 12l-5-5 1.41-1.41L10 9.18l3.59-3.59L15 7l-5 5z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-3">
+          <div class="flex gap-4 col-span-2 p-0">
+            <img src="images/users_red.png" class="w-4 h-4 mt-1" />
+            <div class="text-5xl font-light p-0">352</div>
+          </div>
+          <div class="grid place-items-end pb-1">
+            <img alt="chart" src="/images/chart_red.png" class="" />
+          </div>
+          <div class="justify-self-end col-span-3 text-xs mt-1">
+            By: <span class="font-semibold">Day</span>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-md py-3 px-8 grid gap-2">
+        <div class="grid grid-cols-3 items-center text-sm">
+          <div class="col-span-2">New Groups Registered</div>
+          <div class="relative col-span-1 justify-end">
+            <select
+              id="location"
+              name="location"
+              class="form-control appearance-none text-xs  py-2 text-base border-1 border-gray-250 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+            >
+              <option>Month</option>
+              <option>Day</option>
+              <option>Week</option>
+              <option>Number</option>
+              <option>Amount</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <svg class="fill-current h-4 w-4" viewBox="0 0 20 20">
+                <path d="M10 12l-5-5 1.41-1.41L10 9.18l3.59-3.59L15 7l-5 5z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-3">
+          <div class="flex gap-4 col-span-2 p-0">
+            <img src="images/users_red.png" class="w-4 h-4 mt-1" />
+            <div class="text-5xl font-light p-0">12</div>
+          </div>
+          <div class="grid place-items-end pb-1">
+            <img alt="chart" src="/images/chart_red.png" class="" />
+          </div>
+          <div class="justify-self-end col-span-3 text-xs mt-1">
+            By: <span class="font-semibold">Month</span>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-md py-3 px-8 grid gap-2">
+        <div class="grid grid-cols-3 items-center text-sm">
+          <div class="col-span-2">Orders By Wallet in UGX</div>
+          <div class="relative col-span-1 justify-end">
+            <select
+              id="location"
+              name="location"
+              class="form-control appearance-none text-xs  py-2 text-base border-1 border-gray-250 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+            >
+              <option>Week</option>
+              <option>Day</option>
+              <option>Month</option>
+              <option>Number</option>
+              <option>Amount</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <svg class="fill-current h-4 w-4" viewBox="0 0 20 20">
+                <path d="M10 12l-5-5 1.41-1.41L10 9.18l3.59-3.59L15 7l-5 5z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-3">
+          <div class="flex gap-4 col-span-2 p-0">
+            <img src="images/users_blue.png" class="w-4 h-4 mt-1" />
+            <div class="text-5xl font-light p-0">275K</div>
+          </div>
+          <div class="grid place-items-end pb-1">
+            <img alt="chart" src="/images/chart_blue.png" class="" />
+          </div>
+          <div class="justify-self-end col-span-3 text-xs mt-1">
+            By: <span class="font-semibold">Week</span>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-md py-3 px-8 grid gap-2">
+        <div class="grid grid-cols-3 items-center text-sm">
+          <div class="col-span-2">AVG Groups Saving by App</div>
+          <div class="relative col-span-1 justify-end">
+            <select
+              id="location"
+              name="location"
+              class="form-control appearance-none text-xs  py-2 text-base border-1 border-gray-250 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+            >
+              <option>Number</option>
+              <option>Week</option>
+              <option>Month</option>
+              <option>Day</option>
+              <option>Amount</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <svg class="fill-current h-4 w-4" viewBox="0 0 20 20">
+                <path d="M10 12l-5-5 1.41-1.41L10 9.18l3.59-3.59L15 7l-5 5z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-3">
+          <div class="flex gap-4 col-span-2 p-0">
+            <img src="images/users_orange.png" class="w-4 h-4 mt-1" />
+            <div class="text-5xl font-light p-0">62</div>
+          </div>
+          <div class="grid place-items-end pb-1">
+            <img alt="chart" src="/images/chart_orange.png" class="" />
+          </div>
+          <div class="justify-self-end col-span-3 text-xs mt-1">
+            By: <span class="font-semibold">Number</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid mt-4 grid-cols-5 gap-6">
+      <div class="col-span-3 bg-white rounded-md pb-2">
+        <div class="flex justify-between items-center border-b border-b-2 py-3 px-8 text-sm">
+          <div>Products orders (Monthly)</div>
+          <div class="flex items-center gap-4">
+            <span class="text-gray-600 font-light">Performance by:</span>
+            <div class="flex flex-cols-4 border rounded-md justify-center items-center">
+              <div class="border-r px-3 py-1 shadow-[inset_0_1px_4px_0_rgba(0,0,0,0.3)] hover:cursor-pointer">District</div>
+              <div class="border-r px-3 py-1 hover:shadow-[inset_0_1px_4px_0_rgba(0,0,0,0.3)] hover:cursor-pointer text-gray-400 font-light">Product</div>
+              <div class="border-r px-3 py-1 hover:shadow-[inset_0_1px_4px_0_rgba(0,0,0,0.3)] hover:cursor-pointer text-gray-400 font-light">Volume</div>
+              <div class="border-r px-3 py-1 hover:shadow-[inset_0_1px_4px_0_rgba(0,0,0,0.3)] hover:cursor-pointer text-gray-400 font-light">Amount</div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="grid py-4 pb-2 text-sm grid-cols-1">
+          <div class="flex gap-16 px-8  w-full items-center justify-end">
+            <div class="flex items-center gap-2">
+              Orders
+              <div class="w-1.5 h-1.5 rounded-full bg-[#00bfa5]"></div>
+            </div>
+            <div class="flex items-center gap-2">
+              Days
+              <div class="w-1.5 h-1.5 rounded-full bg-[#ff9100]"></div>
+            </div>
+            <div class="flex items-center gap-2">
+              Agents
+              <div class="w-1.5 h-1.5 rounded-full bg-[red]"></div>
+            </div>
+          </div>
+          <div class="pl-3 pr-8">
+            <canvas id="myChart" class=""></canvas>
+          </div>
+          
+        </div>
+      </div>
+      <div class="col-span-2 bg-white rounded-md pb-2">
+        <div class="flex justify-between items-center border-b border-b-2 py-3 px-8 text-sm">
+          <div>Records</div>
+          <div class="">
+            <div class="flex items-center text-sm gap-2">
+              <div class="col-span-2 text-gray-600 font-light">Display by:</div>
+              <div class="relative justify-end">
+                <select
+                  id="location"
+                  name="location"
+                  class="form-control appearance-none text-xs pr-10  py-2 text-base border-1 border-gray-250 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                >
+                  <option>Output</option>
+                  <option>Week</option>
+                  <option>Month</option>
+                  <option>Day</option>
+                  <option>Amount</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                  <i class="fa-solid fa-caret-down text-gray-700"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 px-8 py-4 text-sm gap-4">
+          <div class="flex justify-between">
+            <div class="flex items-center gap-3">
+              <div class=" rounded-full  bg-indigo-200 p-3">
+              </div>
+              <div>
+                <div class="text-md">Long Name Demo Saving Group</div>
+                <div class="flex gap-2">
+                  <span class="text-[#03a9f4]">20</span>
+                  <span class="text-gray-400">Output records</span>
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 justify-end ">
+              <div class="flex justify-end gap-1 font-semibold text-gray-400">
+                UGX <span class="text-[#03a9f4]">818,500</span>
+              </div>
+              <div class="flex justify-end text-[0.7rem] text-gray-400">Combined Total Worth</div>
+            </div>
+          </div>
+          <div class="flex justify-between">
+            <div class="flex items-center gap-3">
+              <div class=" rounded-full bg-[#ffccbc] p-3">
+              </div>
+              <div>
+                <div class="text-md">Wabigalo Lake Kyoga Fish Group</div>
+                <div class="flex gap-2">
+                  <span class="text-[#03a9f4]">15</span>
+                  <span class="text-gray-400">Output records</span>
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 justify-end ">
+              <div class="flex justify-end gap-1 font-semibold text-gray-400">
+                UGX <span class="text-[#03a9f4]">750,000</span>
+              </div>
+              <div class="flex justify-end text-[0.7rem] text-gray-400">Combined Total Worth</div>
+            </div>
+            
+          </div>
+          <div class="flex justify-between">
+            <div class="flex items-center gap-3">
+              <div class=" rounded-full bg-teal-100 p-3">
+              </div>
+              <div>
+                <div class="text-md">Ribe Ber Youth Group</div>
+                <div class="flex gap-2">
+                  <span class="text-[#03a9f4]">13</span>
+                  <span class="text-gray-400">Output records</span>
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 justify-end ">
+              <div class="flex justify-end gap-1 font-semibold text-gray-400">
+                UGX <span class="text-[#03a9f4]">680,200</span>
+              </div>
+              <div class="flex justify-end text-[0.7rem] text-gray-400">Combined Total Worth</div>
+            </div>
+          </div>
+          <div class="flex justify-between">
+            <div class="flex items-center gap-3">
+              <div class=" rounded-full bg-red-100 p-3">
+              </div>
+              <div>
+                <div class="text-md">God Is Great Farmers Group</div>
+                <div class="flex gap-2">
+                  <span class="text-[#03a9f4]">12</span>
+                  <span class="text-gray-400">Output records</span>
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 justify-end ">
+              <div class="flex justify-end gap-1 font-semibold text-gray-400">
+                UGX <span class="text-[#03a9f4]">512,500</span>
+              </div>
+              <div class="flex justify-end text-[0.7rem] text-gray-400">Combined Total Worth</div>
+            </div>
+          </div>
+          <div class="flex justify-between">
+            <div class="flex items-center gap-3">
+              <div class=" rounded-full bg-[#ffccbc] p-3">
+              </div>
+              <div>
+                <div class="text-md">Wazalendo Womens Group</div>
+                <div class="flex gap-2">
+                  <span class="text-[#03a9f4]">11</span>
+                  <span class="text-gray-400">Output records</span>
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 justify-end ">
+              <div class="flex justify-end gap-1 font-semibold text-gray-400">
+                UGX <span class="text-[#03a9f4]">490,500</span>
+              </div>
+              <div class="flex justify-end text-[0.7rem] text-gray-400">Combined Total Worth</div>
+            </div>
+          </div>
+          <div class="flex justify-between">
+            <div class="flex items-center gap-3">
+              <div class=" rounded-full bg-red-100 p-3">
+              </div>
+              <div>
+                <div class="text-md">Wazalendo Children's Group</div>
+                <div class="flex gap-2">
+                  <span class="text-[#03a9f4]">10</span>
+                  <span class="text-gray-400">Output records</span>
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 justify-end ">
+              <div class="flex justify-end gap-1 font-semibold text-gray-400">
+                UGX <span class="text-[#03a9f4]">300,500</span>
+              </div>
+              <div class="flex justify-end text-[0.7rem] text-gray-400">Combined Total Worth</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid mt-4 grid-cols-5 gap-6">
+      <div class="col-span-3 bg-white rounded-md pb-2">
+        <div class="flex justify-between items-center border-b border-b-2 py-3 px-8 text-sm">
+          <div>Agent Performance</div>
+          <div class="items-center gap-4">
+            <div class="dropdown">
+              <div
+                class="btn shadow-none p-0"
+                type="button"
+                id="dropdownMenuButton"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+              >
+              <i class="fa-solid fa-ellipsis text-2xl"></i>
+            </div>
+              <ul class="dropdown-menu dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+              </ul>
+            </div>
+          </div>
+          
+        </div>
+        <div class="flex py-2 pb-2 text-xs grid-cols-1 pr-8">
+          <table class="table table-responsive table-borderless ml-[0.05rem]">
+            <tbody class="p-0 py-0 justify-content-center">
+              <tr scope="row" class="text-uppercase text-gray-400 font-light text-[0.9rem] px-0">
+                <td scope="col" class="px-2 pb-3 ">
+                  <div class="pl-6">Agent</div>
+                </td>
+                <td scope="col" class="px-1 pb-3">district</td>
+                <td scope="col"class="px-1 pb-3" >groups</td>
+                <td scope="col" class="px-1 pb-3 text-end px-4">commission</td>
+                <td scope="col" class="px-3 pb-3">status</td>
+                <td scope="col" class="px-1 pb-3">Action</td>
+              </tr>
+              <tr class="py-0">
+                <th scope="row" class="flex py-2 pr-2 px-0">
+                  <div class="h-8 w-[0.15rem] bg-blue-200"></div>
+                  <div class="flex justify-center items-center pl-7">Uchereria Bancrofti Ouma</div>
+                </th>
+                <td class="py-3 px-1 text-gray-400">
+                  Tororo
+                </td>
+                <td class="py-3 px-1 text-gray-400">8</td>
+                <td class="py-3 px-1 align-self-center text-end px-4">1,440,000</td>
+                <td class="py-3 px-1 px-3 text-blue-200">Active</td>
+                <td class="p-0 px-1 justify-content-center w-32 py-1">
+                  <div class="relative justify-end">
+                    <select
+                      id="location"
+                      name="location"
+                      class="form-control appearance-none bg-gray-200 rounded-lg py-2.5 pr-8 pl-3 text-sm  text-base border-none border-gray-250 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                    >
+                      <option>Send Message</option>
+                      <option>Suspend</option>
+                      <option>De-Activate</option>
+                      <option>Send SMS</option>
+                      <option>Assign Group</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                      <svg class="fill-current h-4 w-4" viewBox="0 0 20 20">
+                        <path d="M10 12l-5-5 1.41-1.41L10 9.18l3.59-3.59L15 7l-5 5z" />
+                      </svg>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="">
+                <th scope="row" class="flex py-2 pr-2 px-0">
+                  <div class="h-8 w-[0.15rem] bg-blue-200"></div>
+                  <div class="flex justify-center items-center pl-7">Jimmy Ajal Oballa</div>
+                </th>
+                <td class="py-3 px-1 text-gray-400">
+                  Kitgum
+                </td>
+                <td class="py-3 px-1 text-gray-400">7</td>
+                <td class="py-3 px-1 align-self-center text-end px-4">1,120,000</td>
+                <td class="py-3 px-1 px-3 text-blue-200">Active</td>
+                <td class="p-0 px-1 justify-content-center w-32 py-1">
+                  <div class="relative justify-end">
+                    <select
+                      id="location"
+                      name="location"
+                      class="form-control appearance-none bg-gray-200 py-2.5 pr-8 pl-4 text-sm rounded-lg  text-base border-none border-gray-250 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                    >
+                      <option>Suspend</option>
+                      <option>Send Message</option>
+                      <option>De-Activate</option>
+                      <option>Send SMS</option>
+                      <option>Assign Group</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                      <svg class="fill-current h-4 w-4" viewBox="0 0 20 20">
+                        <path d="M10 12l-5-5 1.41-1.41L10 9.18l3.59-3.59L15 7l-5 5z" />
+                      </svg>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="">
+                <th scope="row" class="flex py-2 pr-2 px-0">
+                  <div class="h-8 w-[0.15rem] bg-[#ff9100]"></div>
+                  <div class="flex justify-center items-center pl-7">Gloria Aol Lakewna</div>
+                </th>
+                <td class="py-3 px-1 text-gray-400">
+                  Gulu
+                </td>
+                <td class="py-3 px-1 text-gray-400">7</td>
+                <td class="py-3 px-1 align-self-center text-end px-4">240,000</td>
+                <td class="py-3 px-1 px-3 text-[#ff9100]">Inactive</td>
+                <td class="p-0 px-1 justify-content-center w-32 py-1">
+                  <div class="relative justify-end">
+                    <select
+                      id="location"
+                      name="location"
+                      class="form-control appearance-none bg-gray-200 py-2.5 pr-8 pl-4 text-sm rounded-lg  text-base border-none border-gray-250 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                    >
+                      <option>De-Activate</option>
+                      <option>Send Message</option>
+                      <option>Suspend</option>
+                      <option>Send SMS</option>
+                      <option>Assign Group</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                      <svg class="fill-current h-4 w-4" viewBox="0 0 20 20">
+                        <path d="M10 12l-5-5 1.41-1.41L10 9.18l3.59-3.59L15 7l-5 5z" />
+                      </svg>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="">
+                <th scope="row" class="flex py-2 pr-2 px-0">
+                  <div class="h-8 w-[0.15rem] bg-[red]"></div>
+                  <div class="flex justify-center items-center pl-7">Dennish Owira</div>
+                </th>
+                <td class="py-3 px-1 text-gray-400">
+                  Pader
+                </td>
+                <td class="py-3 px-1 text-gray-400">7</td>
+                <td class="py-3 px-1 align-self-center text-end px-4">0</td>
+                <td class="py-3 px-1 px-3 text-[red]">Dormant</td>
+                <td class="p-0 px-1 justify-content-center w-32 py-1">
+                  <div class="relative justify-end">
+                    <select
+                      id="location"
+                      name="location"
+                      class="form-control appearance-none bg-gray-200 py-2.5 pr-8 pl-4 text-sm rounded-lg  text-base border-none border-gray-250 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                    >
+                      <option>Send Message</option>
+                      <option>Suspend</option>
+                      <option>De-Activate</option>
+                      <option>Send SMS</option>
+                      <option>Assign Group</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                      <svg class="fill-current h-4 w-4" viewBox="0 0 20 20">
+                        <path d="M10 12l-5-5 1.41-1.41L10 9.18l3.59-3.59L15 7l-5 5z" />
+                      </svg>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="">
+                <th scope="row" class="flex py-2 pr-2 px-0">
+                  <div class="h-8 w-[0.15rem] bg-[#00bfa5]"></div>
+                  <div class="flex justify-center items-center pl-7">Jimmy Ajal Oballa</div>
+                </th>
+                <td class="py-3 px-1 text-gray-400">
+                  Oyam
+                </td>
+                <td class="py-3 px-1 text-gray-400">0</td>
+                <td class="py-3 px-1 align-self-center text-end px-4">0</td>
+                <td class="py-3 px-1 px-3 text-[#00bfa5]">New</td>
+                <td class="p-0 px-1 justify-content-center w-32 py-1">
+                  <div class="relative justify-end">
+                    <select
+                      id="location"
+                      name="location"
+                      class="form-control appearance-none bg-gray-200 py-2.5 pr-8 pl-4 text-sm rounded-lg  text-base border-none border-gray-250 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                    >
+                      <option>Assign Grou</option>
+                      <option>Suspend</option>
+                      <option>De-Activate</option>
+                      <option>Send SMS</option>
+                      <option>Send Message</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                      <svg class="fill-current h-4 w-4" viewBox="0 0 20 20">
+                        <path d="M10 12l-5-5 1.41-1.41L10 9.18l3.59-3.59L15 7l-5 5z" />
+                      </svg>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="">
+                <th scope="row" class="flex py-2 pr-2 px-0">
+                  <div class="h-8 w-[0.15rem] bg-blue-200"></div>
+                  <div class="flex justify-center items-center pl-7">Gloria Aol Lakewna</div>
+                </th>
+                <td class="py-3 px-1 text-gray-400">
+                  Lamwo
+                </td>
+                <td class="py-3 px-1 text-gray-400">5</td>
+                <td class="py-3 px-1 align-self-center text-end px-4">480,000</td>
+                <td class="py-3 px-1 px-3 text-blue-200">Active</td>
+                <td class="p-0 px-1 justify-content-center w-32 py-1">
+                  <div class="relative justify-end">
+                    <select
+                      id="location"
+                      name="location"
+                      class="form-control appearance-none bg-gray-200 py-2.5 pr-8 pl-4 text-sm rounded-lg  text-base border-none border-gray-250 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                    >
+                      <option>Change Role</option>
+                      <option>Suspend</option>
+                      <option>De-Activate</option>
+                      <option>Send SMS</option>
+                      <option>Send Message</option>
+                      <option>Assign Group</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                      <svg class="fill-current h-4 w-4" viewBox="0 0 20 20">
+                        <path d="M10 12l-5-5 1.41-1.41L10 9.18l3.59-3.59L15 7l-5 5z" />
+                      </svg>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="Dennish Owira">
+                <th scope="row" class="flex py-2 pr-2 px-0">
+                  <div class="h-8 w-[0.15rem] bg-blue-200"></div>
+                  <div class="flex justify-center items-center pl-7">Dennish Owira</div>
+                </th>
+                <td class="py-3 px-1 text-gray-400">
+                  Lamwo
+                </td>
+                <td class="py-3 px-1 text-gray-400">2</td>
+                <td class="py-3 px-1 align-self-center text-end px-4">120,000</td>
+                <td class="py-3 px-1 px-3 text-blue-200">Active</td>
+                <td class="p-0 px-1 justify-content-center w-32 py-1">
+                  <div class="relative justify-end">
+                    <select
+                      id="location"
+                      name="location"
+                      class="form-control appearance-none bg-gray-200 py-2.5 pr-8 pl-4 text-sm rounded-lg  text-base border-none border-gray-250 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                    >
+                      <option>Transfer Group</option>
+                      <option>Suspend</option>
+                      <option>De-Activate</option>
+                      <option>Send SMS</option>
+                      <option>Send Message</option>
+                      <option>Assign Group</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                      <svg class="fill-current h-4 w-4" viewBox="0 0 20 20">
+                        <path d="M10 12l-5-5 1.41-1.41L10 9.18l3.59-3.59L15 7l-5 5z" />
+                      </svg>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="col-span-2 bg-white rounded-md pb-2">
+        <div class="flex justify-between items-center border-b border-b-2 py-3 px-8 text-sm">
+          <div>Commissions Issued Recently</div>
+          <div class="">
+            <div class="flex items-center text-sm gap-2">
+              <div class="col-span-2 text-gray-600 font-light">View by:</div>
+              <div class="relative justify-end">
+                <select
+                  id="location"
+                  name="location"
+                  class="form-control appearance-none text-xs pr-10  py-2 text-base border-1 border-gray-250 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                >
+                  <option>Partner</option>
+                  <option>Agent Name</option>
+                  <option>Commission Reason</option>
+                  <option>Commission Status</option>
+                  <option>Client Name</option>
+                  <option>Commission Amount</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                  <i class="fa-solid fa-caret-down text-gray-700"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 px-8 py-4 text-sm gap-10">
+          <div class="grid grid-cols-2">
+            <div class="flex items-center gap-3">
+              <div class=" rounded-full  bg-orange-200 w-10 h-10 flex justify-center items-center text-orange-500 font-semibold">
+                RO
+              </div>
+              <div>
+                <div class="text-md">Rebbeca Okumu</div>
+                <div class="font-light text-gray-400">
+                  Monthly Commission
+                </div>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="flex justify-center items-center">
+                <i class="fa-solid fa-share text-gray-400 text-lg"></i>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class=" rounded-full  bg-green-100 w-10 h-10 flex items-center justify-center">
+                  <i class="fa-solid fa-check text-green-700 px-1 py-1 fa-lg"></i>
+                </div>
+                <div class="flex-shrink-0">
+                  <div class="text-gray-400">
+                    Local Links
+                  </div>
+                  <div class="font-semibold">120,000</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2">
+            <div class="flex items-center gap-3">
+              <div class=" rounded-full  bg-pink-200 w-10 h-10 flex justify-center items-center text-pink-500 font-semibold">
+                JA
+              </div>
+              <div>
+                <div class="text-md">Jimmy Ajal Oballa</div>
+                <div class="font-light text-gray-400">
+                  Sales Seeds
+                </div>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="flex justify-center items-center">
+                <i class="fa-solid fa-share text-gray-400 text-lg"></i>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class=" rounded-full  bg-green-100 w-10 h-10 flex items-center justify-center">
+                  <i class="fa-solid fa-check text-green-700 px-1 py-1 fa-lg"></i>
+                </div>
+                <div class="flex-shrink-0">
+                  <div class="text-gray-400">
+                    Brac Seeds Uganda
+                  </div>
+                  <div class="font-semibold">220,000</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2">
+            <div class="flex items-center gap-3">
+              <div class=" rounded-full  bg-pink-200 w-10 h-10 flex justify-center items-center text-pink-500 font-semibold">
+                GA
+              </div>
+              <div>
+                <div class="text-md">Gloria Aol Lakwena</div>
+                <div class="font-light text-gray-400">
+                  Cancelled
+                </div>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="flex justify-center items-center">
+                <i class="fa-solid fa-share text-gray-400 text-lg"></i>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class=" rounded-full  bg-red-100 w-10 h-10 flex items-center justify-center">
+                  <i class="fa-solid fa-xmark text-[red] px-1 py-1 fa-lg"></i>
+                </div>
+                <div class="flex-shrink-0">
+                  <div class="text-gray-400">
+                    49ers Uganda
+                  </div>
+                  <div class="font-semibold">0</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2">
+            <div class="flex items-center gap-3">
+              <div class=" rounded-full  bg-indigo-200 w-10 h-10 flex justify-center items-center text-indigo-500 font-semibold">
+                UB
+              </div>
+              <div>
+                <div class="text-md">Uchere Bancrofti Ouma</div>
+                <div class="font-light text-gray-400">
+                  Tractor Ploughing
+                </div>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="flex justify-center items-center">
+                <i class="fa-solid fa-share text-gray-400 text-lg"></i>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class=" rounded-full  bg-green-100 w-10 h-10 flex items-center justify-center">
+                  <i class="fa-solid fa-check text-green-700 px-1 py-1 fa-lg"></i>
+                </div>
+                <div class="flex-shrink-0">
+                  <div class="text-gray-400">
+                    Shallom Ventures
+                  </div>
+                  <div class="font-semibold">150,500</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="bg-gray-200 px-14 pt-6 pb-8 text-sm">
+    <div class="text-gray-400 font-light">
+      For more Information: <span class="text-gray-700 font-semibold">Contact Us</span> © 2022. All Rights Reserved. <a href="#" class="text-[#03a9f4] underline">ATP Africa</a> / <a href="Local Links" class="text-[#03a9f4] underline">Local Links</a>
+    </div>
+  </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.js"></script>
+  <script>
+    const ctx = document.getElementById('myChart');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['0 weeks', '', '', '', '', '1', '', '', '', '',  '2', '', '', '', '', '3', '', '', '', '4'],
+        datasets: [{
+          axis: 'y',
+          data: [7, 15, 7, 15, 19, 14, 11, 18, 10, 15, 20, 17, 20, 18, 18, 5, 10, 16, 11, 16],
+          fill: false,
+          backgroundColor: [
+            'white',
+          ],
+          borderColor: [
+            'red',
+          ],
+          borderWidth: 2
+        },
+        {
+          axis: 'y',
+          data: [29, 36, 37, 48, 43, 37, 32, 31, 36, 37, 30, 42, 49, 56, 40, 32, 37, 32, 35, 42],
+          fill: false,
+          backgroundColor: [
+            'white'
+          ],
+          borderColor: [
+            '#ff9100',
+          ],
+          borderWidth: 2
+        },
+        {
+          axis: 'y',
+          data: [49, 42, 49, 42, 38, 35, 42, 55, 47, 43, 47, 48, 36, 29, 39, 51, 46, 41, 45, 36],
+          fill: false,
+          backgroundColor: [
+            'white',
+          ],
+          borderColor: [
+            '#00bfa5',
+          ],
+          borderWidth: 2
+        }]
+      },
+      options: {
+        plugins: {
+      legend: {
+        display: false
+      },
+    },
+        legend: {
+          labels: {
+              size: 16
+          }
+        },
+        scales: {
+          x: {
+            grid: {
+              display: false,
+            },
+            ticks: {
+              color: '#bdbdbd',
+              font: {
+                size: 14,
+              }
+            }
+          },
+          y: {
+            border: {
+              display: false,
+            },
+            ticks: {
+              padding: 22,
+              color: '#bdbdbd',
+              font: {
+                size: 14,
+              }
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
